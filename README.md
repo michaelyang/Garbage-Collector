@@ -17,7 +17,11 @@ gcc -o AnyName testx.c myalloc.c
 Then run the compiled code.
 
 Test1: Simple test for the basic functions such as myallocinit, myalloc, printallocation, and myfree.
+
 Test2: This test reads up to 5 doubles from stdin, terminated by a negative number.  It then inserts them into a list, prints the list, and frees the list nodes. Note that more than 5 doubles gives a segmentation fault.
+
 Test3: This test reads up to 5 doubles from stdin, terminated by a negative number.  It then inserts them into a list, and prints the list. Unlike test2, it doesn't free the list nodes.  Instead, it calls the garbage collector. Again, note that more than 5 doubles gives a segmentation fault.
+
 Test4: A simple test for the gc collector after calling a sequence of myalloc and myfree
+
 Test5: This tests whether garbage collection works after a function call exits. Note that after the AR is deallocated, a pointer to the heap may still exist, and an unreachable block will not get garbage collected.
